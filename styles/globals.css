@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,174 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+input,
+.input-icon {
+  @apply bg-gray-100 focus:outline-none rounded-full px-2;
+}
+
+.input-icon > i {
+  @apply bg-white rounded-full;
+  width: 30px !important;
+  height: 28px !important;
+}
+
+input {
+  @apply text-gray-900 mx-2 py-2 px-4 rounded-full;
+}
+
+.btn {
+  @apply rounded-full bg-yellow-300 text-gray-900 font-bold text-sm px-4 py-2 h-auto;
+}
+
+.btn-icon {
+  @apply text-gray-800;
+}
+
+.btn-icon-white {
+  /* @apply p-1; */
+  width: 21px !important;
+  height: 20px !important;
+  margin-right: 10px !important;
+  text-align: center;
+  font-size: 0.5em;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.btn-group {
+  @apply flex flex-row items-center justify-between;
+}
+
+main {
+  @apply w-full h-full bg-white;
+}
+
+aside {
+  @apply left-0 top-[10%] fixed w-20 transition-all duration-100 h-[90vh] py-2 flex flex-col justify-between items-center;
+}
+
+.side-btn {
+  @apply my-2 text-gray-500 w-16 h-8 transition-all duration-75 hover:text-blue-600 hover:border-l-[3px] border-blue-600;
+}
+
+.side-btn.mode {
+  @apply text-gray-800 font-bold pl-2 text-left hover:text-blue-600;
+}
+
+nav {
+  @apply flex flex-row items-center;
+}
+
+nav > .logo {
+  @apply w-10 h-10 rounded-full shadow-xl drop-shadow-2xl mx-auto;
+}
+
+nav > .nav-content {
+  @apply w-full h-[60px] bg-white container mx-auto px-12 pl-0 flex flex-row items-center justify-between;
+}
+
+.nav-content > .brand > label {
+  @apply font-bold;
+}
+
+.nav-content > .brand {
+  @apply flex flex-row justify-between items-center w-[500px];
+}
+
+.nav-content > .tools {
+  @apply flex flex-row justify-between w-[300px];
+}
+
+.nav-content > .tools > .btn-group {
+  @apply w-[60px];
+}
+
+div.user {
+  @apply w-8 h-8;
+}
+
+div.user > img {
+  @apply w-full h-full rounded-full;
+}
+
+div.content {
+  @apply rounded-3xl rounded-r-none rounded-b-none absolute top-[60px] bg-gray-200 right-0 h-auto w-[95%] bg-cover p-8;
+  background-image: url("/images/board-wave.svg");
+  background-attachment: fixed;
+}
+
+.toolbar,
+.stats {
+  @apply flex flex-row items-start justify-between;
+}
+
+.view > button > i {
+  @apply text-white;
+}
+
+.view > button:last-child > i {
+  @apply text-gray-300 ml-6;
+}
+
+.stats {
+  @apply w-2/4 items-center;
+}
+
+.stat > label {
+  @apply text-gray-200;
+}
+
+.stat > p {
+  @apply text-lg border-l-[4px] border-yellow-200 text-yellow-200 my-2 px-2 font-bold;
+  line-height: 20px;
+}
+
+.sort > p {
+  @apply text-white font-bold;
+}
+
+.card-layout {
+  @apply grid grid-cols-4 gap-4 py-12;
+}
+
+.card {
+  @apply rounded-lg bg-white p-6;
+}
+
+.card-tools {
+  @apply flex flex-row items-start justify-between;
+}
+
+.card-tools > .card-icon {
+  @apply bg-gray-200 rounded-md p-2 my-2 h-auto w-auto;
+}
+
+.card-content {
+  @apply pt-4;
+}
+
+.card-title {
+  @apply font-bold text-lg;
+}
+
+.card-description {
+  @apply text-gray-400 pt-2;
+}
+
+.active-project {
+  @apply rounded-full bg-yellow-200 px-4 py-2 my-4;
+}
+
+.team {
+  @apply flex flex-row items-center justify-between bg-gray-100 p-2 rounded-full;
+}
+
+.team img {
+  @apply w-5 h-5 rounded-full;
+}
+
+.members {
+  @apply flex flex-row;
 }
